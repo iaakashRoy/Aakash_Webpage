@@ -89,6 +89,56 @@ body {
     padding-left: 20px;     /* Indent the list for better visibility */
 }
 
+.work {
+    margin-bottom: 40px; /* Spacing between work experiences */
+}
+
+.work h2 {
+    color: #333; /* Heading color */
+    font-size: 24px; /* Heading font size */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.work p {
+    font-size: 16px; /* Text size */
+    line-height: 1.5; /* Line height for readability */
+    color: #555; /* Text color */
+}
+
+.work p strong {
+    color: #333; /* Color for emphasized text */
+}
+
+.note {
+    margin-bottom: 40px; /* Spacing between notes */
+}
+
+.note h2 {
+    color: #333; /* Heading color */
+    font-size: 24px; /* Heading font size */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.note p {
+    font-size: 16px; /* Text size */
+    line-height: 1.5; /* Line height for readability */
+    color: #555; /* Text color */
+}
+
+.note p strong {
+    color: #333; /* Color for emphasized text */
+}
+
+.pdf-link {
+    font-size: 16px; /* Link text size */
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.pdf-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
 /* Footer */
 .footer {
     background-color: #21242f;
