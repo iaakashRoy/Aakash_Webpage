@@ -68,48 +68,84 @@
     <nav class="nav-bar">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="/resources/" class="nav-link">Resources</a>
-        <a href="/blog/" class="nav-link">Blog</a>
-        <a href="/contact/" class="nav-link">Contact</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="/notes/" class="nav-link">Notes</a>
     </nav>
 
     <!-- Main Content -->
     <main class="content">
-        <h1>Projects</h1>
+
+    <!-- Recents Projects Section -->
+    <div class="recent-projects">
+        <h2 style="text-align: left;">Recent Projects</h2>
+
+        <div class="project"></div>
+            <h3>TOEFL Practice</h3>
+            <p><strong>Duration:</strong> Jan 2024–Present</p>
+            <p><strong>Project Type:</strong> Self-Project</p>
+            <p>Used the LLaMA 3.1 70B model and the Groq API to generate questions and passages along with a hardcoded prompt. 
+            Utilized the OpenAI Whisper model for transcription and analysis.</p>
+        </div>
 
         <div class="project">
-            <h2>Image Caption Generator Using Deep Learning</h2>
+            <h3>Retrieval-Augmented Generation (RAG) for PDF Question Answering</h3>
+            <p><strong>Duration:</strong> Jan 2024–Present</p>
+            <p><strong>Project Type:</strong> Self-Project</p>
+            <p>Employed the all-MiniLM-L6-v2 sentence-transformer to create vector representations of text chunks after exploring 
+            several chunking strategies, storing them in Chroma Vector DB. Integrated similarity search with a LLM to retrieve 
+            and generate accurate answers to user queries.</p>
+        </div>
+    <!-- Academic Projects Section -->
+    <div class="academic-projects">
+        <h2 style="text-align: left;">Academic Projects</h2>
+
+        <div class="project">
+            <h3>Image Caption Generator Using Deep Learning</h3>
             <p><strong>Duration:</strong> Jan–May 2023</p>
             <p><strong>Instructor:</strong> Prof. Pushpak Bhattacharyya, IIT Bombay</p>
             <p>Utilized Convolutional neural network (CNN) [VGG19] to process image attributes of Microsoft COCO Dataset. Employed the “Encoder-Decoder” Attention Mechanism from the “Show, attend and Tell: For Image Captioning” paper, combined with Word2Vec embeddings, to establish relationships between text tokens and image pixels by dynamically focusing on relevant parts of an image. Constructed model using Long short-term memory (LSTM), Beam Search for generating the image caption tokens. Achieved BLEU-1 score 72.49 (70.7 in paper).</p>
         </div>
 
         <div class="project">
-            <h2>Class-Prior Estimation From Positive Labeled Data</h2>
+            <h3>Class-Prior Estimation From Positive Labeled Data</h3>
             <p><strong>Duration:</strong> Jan–May 2023</p>
             <p><strong>Supervisor:</strong> Prof. P Balamurugan, IIT Bombay</p>
             <p>Executed the paper “Class-prior estimation for learning from positive and unlabeled data”, considering the problem of learning a classifier using only positive and unlabeled samples. Estimated the class-prior on an unlabeled dataset with additional samples coming only from the positive class.</p>
         </div>
 
         <div class="project">
-            <h2>Optimal Algorithms for Non-Smooth Distributed Optimization in Networks</h2>
+            <h3>Optimal Algorithms for Non-Smooth Distributed Optimization in Networks</h3>
             <p><strong>Duration:</strong> Jan–May 2023</p>
             <p><strong>Instructor:</strong> Prof. Mayank Baranwal, IIT Bombay</p>
             <p>Reviewed and presented the “Distributed optimization of non-smooth convex functions” paper, focusing on Lipschitz continuity and providing optimal convergence rates and algorithms.</p>
         </div>
 
         <div class="project">
-            <h2>Masters Thesis Project: Application of Augmented Reality in Industry</h2>
+            <h3>Masters Thesis Project: Application of Augmented Reality in Industry</h3>
             <p><strong>Duration:</strong> Aug–Dec 2022</p>
             <p><strong>Advisor:</strong> Prof. Jayendran Venkateswaran, IIT Bombay</p>
             <p>Developed an AR application to enhance visualization and problem-solving in industrial processes. Integrated real-time data and 3D model rendering using WebXR, Three.js, and ARCore, compatible with web browsers and mobile devices.</p>
         </div>
 
         <div class="project">
-            <h2>Application and Comparison of LinUCB and DivLinUCB in News Recommendation</h2>
+            <h3>Application and Comparison of LinUCB and DivLinUCB in News Recommendation</h3>
             <p><strong>Duration:</strong> Jan–May 2022</p>
             <p><strong>Supervisor:</strong> Prof. Manjesh Kumar Hanawal, IIT Bombay</p>
             <p>Implemented both the LinUCB, DivLinUCB algorithms with exploration-exploitation trade-off and the paper “Diversity in News recommendation using
+        </div>
+
+        <div class="project">
+            <h3>AI Driven Credit Scoring Model For Farmers</h3>
+            <p><strong>Duration:</strong> Jan–May 2022</p>
+            <p><strong>Supervisor:</strong> Prof. Usha Anantakumar, IIT Bombay</p>
+            <p>Developed a credit scoring model for farmers, addressing challenges such as low financial inclusion, limited access to credit, and unstructured data. Machine learning techniques, including K-Means and Hierarchical Clustering, were used to group farmers based on behavior, focusing on key factors like crop production, land area, and selling price.</p>
+        </div>
+    
+        <div class="project">
+            <h3>Optimization Modeling and Data Visualization</h3>
+            <p><strong>Duration:</strong> Jul 2021–Apr 2022</p>
+            <p><strong>Instructor:</strong> Prof. P Balamurugan, IIT Bombay</p>
+            <p>Explored various optimization models using Pyomo, solving them with CBC and GLPK. Implemented Gradient Descent, Line Search, Newton’s Algorithm, and BFGS Algorithm for solving unconstrained non-linear optimization problems and performed loss minimization. Visualized data using Seaborn and Matplotlib, summarized using descriptive statistics, and performed column normalization, clustering with K-means, and dimensionality reduction using PCA.</p>
         </div>
     </main>
    <!-- Footer -->
@@ -124,7 +160,7 @@
             Site last updated on 2024-10-12
         </div>
         <div class="copyright-text">
-            &copy; Aakash Roy 2024-25
+            &copy; Aakash Roy
         </div>
     </div>
 </footer>

@@ -84,6 +84,11 @@ body {
     color: #333;
 }
 
+.achievements-list {
+    list-style-type: disc;  /* Default bullet point style */
+    padding-left: 20px;     /* Indent the list for better visibility */
+}
+
 /* Footer */
 .footer {
     background-color: #21242f;

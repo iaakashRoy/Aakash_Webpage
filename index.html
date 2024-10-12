@@ -27,29 +27,41 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
     <style>
-
         /* Main Content */
         .content {
-        flex: 1;
-        padding: 20px;
-        margin-left: 270px;      /* Space for the sidebar */
-        max-width: 800px;        /* Set a maximum width to control content width */
-        margin: 20px auto 0;     /* Center horizontally, with some space from the top */
-        text-align: center;      /* Center text horizontally inside the content */
-        overflow-y: auto;        /* Allows scrolling if content overflows */
+            flex: 1;
+            padding: 20px;
+            margin-left: 270px;      /* Space for the sidebar */
+            max-width: 800px;        /* Set a maximum width to control content width */
+            margin: 20px auto 0;     /* Center horizontally, with some space from the top */
+            text-align: left;        /* Align text to the left */
+            overflow-y: auto;        /* Allows scrolling if content overflows */
         }
-
+        .section {
+            margin: 20px 0;         /* Margin for sections */
+        }
+        .section h2 {
+            font-size: 24px;        /* Heading size for sections */
+            margin-bottom: 10px;    /* Space below headings */
+        }
+        .achievements-list {
+            list-style-type: none;   /* Remove default list styling */
+            padding: 0;              /* Remove padding */
+            text-align: left;        /* Align text to the left */
+        }
+        .achievements-list li {
+            margin-bottom: 5px;      /* Space between list items */
+        }
     </style>
 </head>
 <body>
 
     <!-- Navigation Bar -->
     <div class="nav-bar">
-        <a href="/" class="nav-link">Home</a>
+        <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="/resources/" class="nav-link">Resources</a>
-        <a href="/blog/" class="nav-link">Blog</a>
-        <a href="/contact/" class="nav-link">Contact</a>
+        <a href="work.html" class="nav-link">Work</a>
+        <a href="/notes/" class="nav-link">Notes</a>
     </div>
 
     <div class="wrapper">
@@ -58,10 +70,12 @@
             <!-- Profile Photo -->
             <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="profile-photo-container">
                 <a href="media/your-photo.jpeg" itemprop="contentUrl">
-                    <img itemprop="thumbnail" src="media/your-photo.jpeg" alt="Aakash Roy at IIT Bombay" class="profile-photo">
+                    <img itemprop="thumbnail" src="media/your-photo.jpeg" alt="Darjeeling, India" class="profile-photo">
                 </a>
                 <figcaption>
-                    Aakash Roy at IIT Bombay (Credit to Photographer)
+                    <strong>Aakash Roy</strong>
+                    <br>Associate Data Scientist III<br>
+                    <br>Elevance Health Inc.<br>
                 </figcaption>
             </figure>
             
@@ -70,7 +84,7 @@
                 <a href="https://github.com/iaakashRoy" target="_blank">
                     <i class="fa fa-github" style="font-size:24px"></i> GitHub
                 </a>
-                <a href="https://www.linkedin.com/in/aakashroy/" target="_blank">
+                <a href="https://www.linkedin.com/in/aakash-roy-18723610b" target="_blank">
                     <i class="fa fa-linkedin" style="font-size:24px"></i> LinkedIn
                 </a>
             </div>
@@ -79,25 +93,75 @@
         <!-- Main Content -->
         <main class="content">
             <div class="list-page">
-                <div class="intro-section">
-                    <!-- Introduction Section -->
-                    <div class="intro-text">
-                        <p>
-                            I am a Data Scientist with a Master’s degree in Industrial Engineering and Operations Research from IIT Bombay, 
-                            and over a year of experience in AI and Machine Learning at Elevance Health Inc.
-                        </p>
-                        <a href="files/aroy_CV.pdf">Download Resume</a>
-                        
-                        <!-- Research and Projects Links -->
-                        <p>
-                            My research interests revolve around AI systems inspired by the human brain, neural networks, and reinforcement learning.
-                            Check out my <a href="/projects/">Projects</a> or my <a href="/research/">Research</a> for more details.
-                        </p>
-                    </div>
+                <!-- About Me Section -->
+                <div class="section">
+                    <h2>About Me</h2>
+                    <p>
+                        I am a Data Scientist with over a year of professional experience, driven by a deep curiosity to unravel the meanings embedded in mathematical equations and natural patterns. 
+                        I am fascinated by the mysteries of existence and excited about the future. Regarding AI, I am both optimistic and cautious about its potential. <a href="files/aroy_CV.pdf">Curriculum Vitae</a>
+                    </p>
+                </div>
+                
+                <!-- Research Interests Section -->
+                <div class="section">
+                    <h2>Research Interests</h2>
+                    <p>
+                        I am interested in exploring and comparing the boundaries between existing multimodal models and the human brain. 
+                        I aim to develop learning algorithms that not only mimic brain-like processing, reasoning, and memory but also serve as tools 
+                        to uncover brain functions and cognitive mechanisms by combining neuroscience, deep learning, and reinforcement learning 
+                        for efficient, safe, and aligned models.
+                    </p>
+                </div>
+
+                <!-- Education Section -->
+                <div class="education-section">
+                    <h2>Education</h2>
+                    <ul class="education-list">
+                        <li>
+                            <strong>Master of Science (M.Sc.) in Industrial Engineering and Operations Research</strong> 
+                            <br>Jul 2021 – Jul 2023
+                            <br>Advisor: Prof. Jayendran Venkateswaran | Indian Institute of Technology, Bombay
+                            <br>Major Courses: Deep Learning for NLP, Distributed Machine Learning, Online Machine Learning, 
+                            Introduction to Machine Learning, Optimization Models, Engineering Statistics, Stochastic Processes, 
+                            Linear Systems
+                        </li>
+                        <li>
+                            <strong>Bachelor of Science (B.Sc.) in Mathematics</strong> 
+                            <br>Jul 2017 – Oct 2020
+                            <br>The Bhawanipur Education Society College | University of Calcutta, India
+                            <br>Major Courses: Abstract Algebra, Linear Algebra, Real Analysis, Differential Equations, Probability, Statistics
+                        </li>
+                        <li>
+                            <strong>West Bengal Council of Higher Secondary Education</strong> 
+                            <br>Apr 2016 – May 2017
+                            <br>Barrackpore Government High School | West Bengal, India
+                        </li>
+                        <li>
+                            <strong>West Bengal Board of Secondary Education</strong> 
+                            <br>Apr 2014 – May 2015
+                            <br>Nona Chandanpukur Manmath High School | West Bengal, India
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Achievements Section -->
+                <div class="section">
+                    <h2>Achievements</h2>
+                    <ul class="achievements-list" style="list-style-type: disc; padding-left: 20px;">
+                        <li>Recipient of the Departmental Teaching Assistantship, Indian Institute of Technology, Bombay.</li>
+                        <li>Received Pre-Placement Offer after completion of AI/ML Internship at Carelon Global Solutions (Elevance Health Inc.).</li>
+                        <li>Selected among the top 13 candidates in India for the MSc Programme in the only Industrial Engineering & Operations Research department in India, IIT Bombay.</li>
+                        <li>Cleared Chennai Mathematical Institute Master’s Entrance Examination organized by the Chennai Mathematical Institute, Chennai, India.</li>
+                        <li>Selected for the Mathematics Training and Talent Search program organized by the Mathematics Training and Talent Search Trust, India.</li>
+                        <li>Bagged Certificate in Mathematics Talent and Quiz Competition (Analytica) organized by the Department of Mathematics, St. Xavier’s College, Kolkata, India.</li>
+                        <li>Recipient of the Swami Vivekananda Merit Cum Means Scholarship.</li>
+                    </ul>
+                    
                 </div>
             </div>
         </main>
     </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -110,7 +174,7 @@
                 Site last updated on 2024-10-12
             </div>
             <div class="copyright-text">
-                &copy; Aakash Roy 2024-25
+                &copy; Aakash Roy
             </div>
         </div>
     </footer>
