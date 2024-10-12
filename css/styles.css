@@ -1,114 +1,143 @@
+/* Ensure footer stays at the bottom */
+html, body {
+    height: 100%; /* Set the height to 100% for both html and body */
+    margin: 0; /* Remove default margin */
+}
+
 /* Setting the body to a flex container */
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* Ensure the body takes at least the full height of the viewport */
-    margin: 0; /* Remove default margin */
-}
-
-/* Centering the photo and adjusting its size */
-.profile-photo-container {
-    text-align: center; /* Center the content */
-}
-
-.profile-photo {
-    width: 400px; /* Adjust size */
-    height: auto; /* Maintain aspect ratio */
 }
 
 /* Navigation Bar Style */
 .nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 94%, 0.978); /* Background color */
+    padding: 20px; /* Increased padding for more height */
+    z-index: 1000; /* Stack above other elements */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    
+    /* Centering the contents */
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    background-color: #f0f0f0; /* Background color */
-    padding: 20px 0; /* Increased padding for more height */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 100%; /* Full width */
-    position: relative; /* Position relative for stacking */
-    z-index: 10; /* Stack above other elements */
+    justify-content: center; /* Center links horizontally */
 }
 
+/* Navigation Links */
 .nav-link {
-    margin: 0 15px; /* Spacing between links */
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
+    margin: 0 20px; /* Spacing between links (adjusted for centering) */
     color: #333; /* Text color */
-    font-weight: bold; /* Bold text */
+    font-weight: bold; /* Make the text bold */
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+    height: 100vh; /* Ensures the wrapper takes full viewport height */
+    padding-top: 60px; /* Adds space below the fixed menu bar */
 }
 
 .nav-link:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
-/* Main Content Style */
-.content {
-    max-width: 800px; /* Max width for the content */
-    margin: 0 auto; /* Center content */
-    padding: 20px; /* Padding around content */
-    text-align: center; /* Center the text */
-    flex: 1; /* Allow the content to grow and take available space */
-}
 
-/* Footer Bar Style */
-.footer {
-    background-color: #282c34; /* Dark background for footer */
-    color: #ffffff; /* White text color */
-    padding: 20px 0; /* Padding for the footer */
+/* Left Sidebar */
+.left-sidebar {
+    width: 250px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-right: 1px solid #ddd;
     display: flex;
-    justify-content: center; /* Center items */
-    align-items: center; /* Center items vertically */
-    width: 100%; /* Full width */
-    position: relative; /* Position relative for stacking */
-    z-index: 10; /* Stack above other elements */
-    margin-top: 20px; /* Space above footer */
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    position: fixed; /* Sidebar is fixed on the left */
+    top: 60px; /* Sidebar starts right below the fixed menu bar */
+    left: 0;
 }
 
+.profile-photo-container {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #21242f;
+    border-top: 1px solid #444653;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    color: #333; /* Set footer text color to dark gray */
+    padding: 5px 0; /* Reduced vertical padding */
+}
+
+/* Flexbox container for footer content */
 .footer-content {
-    display: flex; /* Flexbox for horizontal layout */
-    justify-content: space-between; /* Space between items */
-    width: 100%; /* Full width */
-    max-width: 800px; /* Match the content width */
-    padding: 0 20px; /* Side padding */
-    margin: 0 auto; /* Center the footer content */
-}
-
-.copyright-text {
-    text-align: right; /* Align text to the right */
-    flex-grow: 1; /* Allow the copyright text to grow */
+    display: flex; /* Enable flexbox for content */
+    align-items: center; /* Align items vertically in the center */
+    justify-content: flex-start; /* Align items to the start */
+    padding: 0 15px; /* Add horizontal padding for spacing */
 }
 
 .footer-links {
-    list-style: none; /* Remove list styling */
-    display: flex; /* Flexbox for horizontal layout */
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
+    display: flex; /* Enable flexbox for footer links */
+    align-items: center; /* Center items vertically */
+    font-size: 13px;
 }
 
-.footer-links li {
-    margin: 0 15px; /* Spacing between links */
-}
-
-.footer-links a {
-    color: #ffffff; /* White text color */
+.footer-links-kudos {
     text-decoration: none; /* Remove underline */
+    color: #ffffff; /* Footer link color */
+    display: flex; /* Enable flexbox for the link */
+    align-items: center; /* Align icon and text vertically */
+    margin-right: 13px; /* Space between the link and updated text */
 }
 
-.footer-links a:hover {
-    text-decoration: underline; /* Underline on hover */
+.footer-links-kudos i {
+    margin-left: 5px; /* Spacing for icons */
+    color: #ffffff; /* Icon color */
+}
+
+.updated-text {
+    color: #ffffff; /* Updated text color */
+    margin-right: auto; /* Push the text to the right */
+    margin-left: auto;
+    font-size: 13px; /* Space from the updated text to copyright */
 }
 
 .copyright-text {
-    text-align: center; /* Center the copyright text */
-    flex-grow: 1; /* Allow the copyright text to grow */
+    color: #ffffff; /* Copyright text color */
+    font-size: 13px; /* Optional: Reduce font size for a more compact look */
 }
 
-/* Ensure footer stays at the bottom */
-html, body {
-    height: 100%; /* Set the height to 100% for both html and body */
-}
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    flex: 1; /* Make the wrapper take the available space */
+/* Ensure proper styling for highlighted code (if used) */
+.hljs {
+    background: #f0f0f0; /* Background for highlighted code */
+    padding: 10px; /* Padding around highlighted code */
+    border-radius: 5px; /* Rounded corners for highlighted code */
 }

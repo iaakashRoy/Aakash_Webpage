@@ -26,32 +26,60 @@
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
 
+    <style>
+
+        /* Main Content */
+        .content {
+        flex: 1;
+        padding: 20px;
+        margin-left: 270px;      /* Space for the sidebar */
+        max-width: 800px;        /* Set a maximum width to control content width */
+        margin: 20px auto 0;     /* Center horizontally, with some space from the top */
+        text-align: center;      /* Center text horizontally inside the content */
+        overflow-y: auto;        /* Allows scrolling if content overflows */
+        }
+
+    </style>
 </head>
 <body>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <a href="/" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="/resources/" class="nav-link">Resources</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/contact/" class="nav-link">Contact</a>
+    </div>
+
     <div class="wrapper">
-        <!-- Title Bar with Navigation Links -->
-        <div class="nav-bar">
-            <a href="/" class="nav-link">Home</a>
-            <a href="projects.html" class="nav-link">Projects</a>
-            <a href="/resources/" class="nav-link">Resources</a>
-            <a href="/blog/" class="nav-link">Blog</a>
-            <a href="/contact/" class="nav-link">Contact</a>
+        <!-- Left Sidebar with Profile Photo and Links -->
+        <div class="left-sidebar">
+            <!-- Profile Photo -->
+            <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="profile-photo-container">
+                <a href="media/your-photo.jpeg" itemprop="contentUrl">
+                    <img itemprop="thumbnail" src="media/your-photo.jpeg" alt="Aakash Roy at IIT Bombay" class="profile-photo">
+                </a>
+                <figcaption>
+                    Aakash Roy at IIT Bombay (Credit to Photographer)
+                </figcaption>
+            </figure>
+            
+            <!-- Social Links -->
+            <div class="social-links">
+                <a href="https://github.com/iaakashRoy" target="_blank">
+                    <i class="fa fa-github" style="font-size:24px"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/aakashroy/" target="_blank">
+                    <i class="fa fa-linkedin" style="font-size:24px"></i> LinkedIn
+                </a>
+            </div>
         </div>
         
         <!-- Main Content -->
         <main class="content">
             <div class="list-page">
                 <div class="intro-section">
-                    <!-- Centered Photo -->
-                    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="profile-photo-container">
-                        <a href="media/your-photo.jpeg" itemprop="contentUrl">
-                            <img itemprop="thumbnail" src="media/your-photo.jpeg" alt="Aakash Roy at IIT Bombay" class="profile-photo">
-                        </a>
-                        <figcaption>
-                            Aakash Roy at IIT Bombay (Credit to Photographer)
-                        </figcaption>
-                    </figure>
-                    
                     <!-- Introduction Section -->
                     <div class="intro-text">
                         <p>
@@ -69,26 +97,23 @@
                 </div>
             </div>
         </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <li>
-                        <a href="https://github.com/iaakashRoy" class="footer-links-kudos" target="_blank">
-                            Content in <i class="fa fa-github" style="font-size:24px"></i>
-                        </a>
-                    </li>
-                </div>
-                <div class="updated-text">
-                    Site last updated on 2024-10-12
-                </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/iaakashRoy" class="footer-links-kudos" target="_blank">
+                    Content in <i class="fa fa-github" style="font-size:24px"></i>
+                </a>
+            </div>
+            <div class="updated-text">
+                Site last updated on 2024-10-12
             </div>
             <div class="copyright-text">
-                &copy; Aakash Roy 2024
+                &copy; Aakash Roy 2024-25
             </div>
-        </footer>
-
+        </div>
+    </footer>
     <!-- MathJax and Other Scripts -->
     <script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     <script type="text/javascript" src="js/center-img.js"></script>
