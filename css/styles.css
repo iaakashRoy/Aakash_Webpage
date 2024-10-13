@@ -84,9 +84,53 @@ body {
     color: #333;
 }
 
+.section {
+    margin: 20px 0;         /* Margin for sections */
+}
+.section h2 {
+    font-size: 24px;        /* Heading size for sections */
+    margin-bottom: 10px;    /* Space below headings */
+}
+
 .achievements-list {
-    list-style-type: disc;  /* Default bullet point style */
-    padding-left: 20px;     /* Indent the list for better visibility */
+    list-style-type: none;   /* Remove default list styling */
+    padding: 0;              /* Remove padding */
+    text-align: left;        /* Align text to the left */
+}
+.achievements-list li {
+    margin-bottom: 5px;      /* Space between list items */
+}
+
+/* Main Content Style */
+.content {
+    padding: 80px 20px 20px; /* Add top padding for space under the nav */
+    margin: 0 auto; /* Center content */
+    max-width: 1000px; /* Limit content width */
+    text-align: left; /* Align text to the left */
+}
+
+.content h1 {
+    text-align: left; /* Center the main heading */
+}
+
+.project {
+    margin-bottom: 40px; /* Spacing between projects */
+}
+
+.project h2 {
+    color: #333; /* Heading color */
+    font-size: 24px; /* Heading font size */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.project p {
+    font-size: 16px; /* Text size */
+    line-height: 1.5; /* Line height for readability */
+    color: #555; /* Text color */
+}
+
+.project p strong {
+    color: #333; /* Color for emphasized text */
 }
 
 .work {
