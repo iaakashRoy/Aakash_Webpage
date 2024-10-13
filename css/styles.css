@@ -20,7 +20,7 @@ body {
     background-color: hsla(0, 0%, 94%, 0.978); /* Background color */
     padding: 20px; /* Increased padding for more height */
     z-index: 1000; /* Stack above other elements */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     
     /* Centering the contents */
     display: flex;
@@ -29,10 +29,25 @@ body {
 
 /* Navigation Links */
 .nav-link {
-    text-decoration: none;
-    margin: 0 20px; /* Spacing between links (adjusted for centering) */
+    text-decoration: none; /* Remove underline */
+    margin: 0 20px; /* Spacing between links */
     color: #333; /* Text color */
     font-weight: bold; /* Make the text bold */
+    font-size: 17px; /* Increased font size */
+    transition: text-shadow 0.3s ease, transform 0.3s ease, font-size 0.3s ease; /* Smooth transition */
+}
+
+/* Add lighter text shadow and scale on hover */
+.nav-link:hover {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Lighter and smaller text shadow on hover */
+    transform: translateY(-1px) scale(1.1); /* Slight upward movement and increase size on hover */
+    font-size: 17px; /* Slightly increase font size on hover */
+}
+
+/* Add even lighter text shadow for selected link */
+.nav-link.selected {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); /* Lighter text shadow for selected link */
+    font-size: 18px; /* Larger font size for selected */
 }
 
 .wrapper {
@@ -40,10 +55,6 @@ body {
     flex: 1;
     height: 100vh; /* Ensures the wrapper takes full viewport height */
     padding-top: 60px; /* Adds space below the fixed menu bar */
-}
-
-.nav-link:hover {
-    text-decoration: underline; /* Underline on hover */
 }
 
 
@@ -113,24 +124,99 @@ body {
     text-align: left; /* Center the main heading */
 }
 
-.project {
-    margin-bottom: 40px; /* Spacing between projects */
+.projects-wrapper {
+    max-width: 1200px;
+    width: 100%;
 }
 
-.project h2 {
-    color: #333; /* Heading color */
-    font-size: 24px; /* Heading font size */
-    margin-bottom: 10px; /* Space below heading */
+.projects-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px; /* Further reduced gap between boxes */
+    justify-items: center; /* Align boxes to the center */
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px; /* Reduced padding inside the boxes */
+    width: 100%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 5px; /* Reduced margin between boxes */
+}
+
+.project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project h3 {
+    margin-top: 0;
+    color: #0056b3;
 }
 
 .project p {
-    font-size: 16px; /* Text size */
-    line-height: 1.5; /* Line height for readability */
-    color: #555; /* Text color */
+    color: #000000;
+    margin-bottom: 5px; /* Reduced margin between paragraphs */
 }
 
-.project p strong {
-    color: #333; /* Color for emphasized text */
+.project a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Initially hide the project links */
+.project-links {
+    opacity: 0;
+    position: absolute;
+    top: 10px; /* Reduced spacing for the links */
+    right: 10px;
+    display: flex;
+    gap: 5px; /* Reduced gap between links */
+    transition: opacity 0.3s ease;
+}
+
+/* Show the links on hover */
+.project:hover .project-links {
+    opacity: 1;
+}
+
+.project-links a {
+    background-color: #0056b3;
+    color: white;
+    padding: 6px 10px; /* Reduced padding for the links */
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.project-links a:hover {
+    background-color: #003f8a;
+}
+
+/* Add margin after the last project */
+.projects-container .project:last-child {
+    margin-bottom: 40px; /* Adjust the space as needed */
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
 }
 
 .work {

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Aakash Roy - Data Scientist with expertise in AI, Machine Learning, and Data Science.">
-    <meta name="keywords" content="AI, Data Scientist, Machine Learning, IIT Bombay">
+    <meta name="keywords" content="AI, Data Scientist, Machine Learning, IIT Bombay, Projects">
     <meta name="author" content="Aakash Roy">
     <title>Aakash Roy: Data Scientist - Projects</title>
     
     <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" async>
     
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/styles.css">
@@ -17,118 +17,132 @@
     
     <!-- Highlight.js for Code Syntax Highlighting -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/python.min.js" defer></script>
+    <script>
+      window.addEventListener('DOMContentLoaded', (event) => {
+        hljs.initHighlightingOnLoad();
+      });
+    </script>
     
     <!-- Vega.js for Data Visualizations -->
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.17.0" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.12.2" defer></script>
 
 </head>
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="work.html" class="nav-link">Work</a>
-        <a href="notes.html" class="nav-link">Notes</a>
-        <a href="resources.html" class="nav-link">Resources</a>
-    </nav>
+    <header>
+        <nav class="nav-bar">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="projects.html" class="nav-link">Projects</a>
+            <a href="work.html" class="nav-link">Work</a>
+            <a href="notes.html" class="nav-link">Notes</a>
+            <a href="resources.html" class="nav-link">Resources</a>
+        </nav>
+    </header>
 
     <!-- Main Content -->
     <main class="content">
+        <h1>Recent Projects</h1>
 
-    <!-- Recents Projects Section -->
-    <div class="academic-projects">
-        <h1 style="text-align: left;">Recent Projects</h1>
+        <div class="projects-container">
+            <div class="project">
+                <h3>TOEFL Practice</h3>
+                <p><strong>Duration:</strong> Jan 2024–Present</p>
+                <p><strong>Project Type:</strong> Self-Project</p>
+                <p>Used the LLaMA 3.1 70B model and the Groq API to generate questions and passages along with a hardcoded prompt. 
+                Utilized the OpenAI Whisper model for transcription and analysis.</p>
+            </div>
 
-        <div class="project"></div>
-            <h3>TOEFL Practice</h3>
-            <p><strong>Duration:</strong> Jan 2024–Present</p>
-            <p><strong>Project Type:</strong> Self-Project</p>
-            <p>Used the LLaMA 3.1 70B model and the Groq API to generate questions and passages along with a hardcoded prompt. 
-            Utilized the OpenAI Whisper model for transcription and analysis.</p>
+            <div class="project">
+                <h3>Retrieval-Augmented Generation (RAG) for PDF Question Answering</h3>
+                <p><strong>Duration:</strong> Jan 2024–Present</p>
+                <p><strong>Project Type:</strong> Self-Project</p>
+                <p>Employed the all-MiniLM-L6-v2 sentence-transformer to create vector representations of text chunks, storing them in Chroma Vector DB. Integrated similarity search with an LLM to retrieve and generate accurate answers.</p>
+            </div>
+
         </div>
 
-        <div class="project">
-            <h3>Retrieval-Augmented Generation (RAG) for PDF Question Answering</h3>
-            <p><strong>Duration:</strong> Jan 2024–Present</p>
-            <p><strong>Project Type:</strong> Self-Project</p>
-            <p>Employed the all-MiniLM-L6-v2 sentence-transformer to create vector representations of text chunks after exploring 
-            several chunking strategies, storing them in Chroma Vector DB. Integrated similarity search with a LLM to retrieve 
-            and generate accurate answers to user queries.</p>
-        </div>
-    <!-- Academic Projects Section -->
-    <div class="academic-projects">
-        <h1 style="text-align: left;">Academic Projects</h1>
+        <h1>Academic Projects</h1>
 
-        <div class="project">
-            <h3>Image Caption Generator Using Deep Learning</h3>
-            <p><strong>Duration:</strong> Jan–May 2023</p>
-            <p><strong>Instructor:</strong> Prof. Pushpak Bhattacharyya, IIT Bombay</p>
-            <p>Utilized Convolutional neural network (CNN) [VGG19] to process image attributes of Microsoft COCO Dataset. Employed the “Encoder-Decoder” Attention Mechanism from the “Show, attend and Tell: For Image Captioning” paper, combined with Word2Vec embeddings, to establish relationships between text tokens and image pixels by dynamically focusing on relevant parts of an image. Constructed model using Long short-term memory (LSTM), Beam Search for generating the image caption tokens. Achieved BLEU-1 score 72.49 (70.7 in paper).</p>
+        <div class="projects-container">
+            <div class="project">
+                <h3>Image Caption Generator Using Deep Learning</h3>
+                <p><strong>Duration:</strong> Jan–May 2023</p>
+                <p><strong>Instructor:</strong> <a href="https://www.cse.iitb.ac.in/~pb/" target="_blank">Prof. Pushpak Bhattacharyya, IIT Bombay</a></p>
+                <p>Utilized CNN (VGG19) to process image attributes of Microsoft COCO Dataset. Employed the “Encoder-Decoder” Attention Mechanism with Word2Vec embeddings to dynamically focus on relevant parts of an image. Model used LSTM and Beam Search for generating captions. Achieved BLEU-1 score 72.49.</p>
+
+                <div class="project-links">
+                    <a href="files/Image Caption/CS772 Final Project Evaluation.pdf" target="_blank">Slides</a>
+                    <a href="https://github.com/iaakashRoy/academics/tree/3570995d4a6cb60e39167c4cb967ce41edd6ee24/Image%20Caption%20Generator%20Using%20Deep%20Learning" target="_blank">Code</a>
+                </div>
+            </div>
+
+            <div class="project">
+                <h3>Class-Prior Estimation From Positive Labeled Data</h3>
+                <p><strong>Duration:</strong> Jan–May 2023</p>
+                <p><strong>Supervisor:</strong> Prof. P Balamurugan, IIT Bombay</p>
+                <p>Executed the paper “Class-prior estimation for learning from positive and unlabeled data”, addressing the challenge of learning a classifier using only positive and unlabeled samples.</p>
+            </div>
+
+            <div class="project">
+                <h3>Optimal Algorithms for Non-Smooth Distributed Optimization in Networks</h3>
+                <p><strong>Duration:</strong> Jan–May 2023</p>
+                <p><strong>Instructor:</strong> Prof. Mayank Baranwal, IIT Bombay</p>
+                <p>Reviewed the “Distributed optimization of non-smooth convex functions” paper, focusing on Lipschitz continuity and providing optimal convergence rates and algorithms.</p>
+            </div>
+
+            <div class="project">
+                <h3>Masters Thesis: Application of Augmented Reality in Industry</h3>
+                <p><strong>Duration:</strong> Aug–Dec 2022</p>
+                <p><strong>Advisor:</strong> Prof. Jayendran Venkateswaran, IIT Bombay</p>
+                <p>Developed an AR application to enhance visualization in industrial processes. Integrated real-time data and 3D models using WebXR, Three.js, and ARCore.</p>
+            </div>
+
+            <div class="project">
+                <h3>Application and Comparison of LinUCB and DivLinUCB in News Recommendation</h3>
+                <p><strong>Duration:</strong> Jan–May 2022</p>
+                <p><strong>Supervisor:</strong> Prof. Manjesh Kumar Hanawal, IIT Bombay</p>
+                <p>Implemented LinUCB and DivLinUCB algorithms to address the exploration-exploitation trade-off in news recommendations.</p>
+            </div>
+
+            <div class="project">
+                <h3>AI Driven Credit Scoring Model For Farmers</h3>
+                <p><strong>Duration:</strong> Jan–May 2022</p>
+                <p><strong>Supervisor:</strong> Prof. Usha Anantakumar, IIT Bombay</p>
+                <p>Developed a credit scoring model addressing low financial inclusion. Applied clustering algorithms to group farmers based on factors like crop production and selling price.</p>
+            </div>
+
+            <div class="project">
+                <h3>Optimization Modeling and Data Visualization</h3>
+                <p><strong>Duration:</strong> Jul 2021–Apr 2022</p>
+                <p><strong>Instructor:</strong> Prof. P Balamurugan, IIT Bombay</p>
+                <p>Explored optimization models using Pyomo, implementing Gradient Descent, Line Search, Newton’s Algorithm, and BFGS Algorithm for solving non-linear optimization problems.</p>
+            </div>
+        </div>
         </div>
 
-        <div class="project">
-            <h3>Class-Prior Estimation From Positive Labeled Data</h3>
-            <p><strong>Duration:</strong> Jan–May 2023</p>
-            <p><strong>Supervisor:</strong> Prof. P Balamurugan, IIT Bombay</p>
-            <p>Executed the paper “Class-prior estimation for learning from positive and unlabeled data”, considering the problem of learning a classifier using only positive and unlabeled samples. Estimated the class-prior on an unlabeled dataset with additional samples coming only from the positive class.</p>
-        </div>
-
-        <div class="project">
-            <h3>Optimal Algorithms for Non-Smooth Distributed Optimization in Networks</h3>
-            <p><strong>Duration:</strong> Jan–May 2023</p>
-            <p><strong>Instructor:</strong> Prof. Mayank Baranwal, IIT Bombay</p>
-            <p>Reviewed and presented the “Distributed optimization of non-smooth convex functions” paper, focusing on Lipschitz continuity and providing optimal convergence rates and algorithms.</p>
-        </div>
-
-        <div class="project">
-            <h3>Masters Thesis Project: Application of Augmented Reality in Industry</h3>
-            <p><strong>Duration:</strong> Aug–Dec 2022</p>
-            <p><strong>Advisor:</strong> Prof. Jayendran Venkateswaran, IIT Bombay</p>
-            <p>Developed an AR application to enhance visualization and problem-solving in industrial processes. Integrated real-time data and 3D model rendering using WebXR, Three.js, and ARCore, compatible with web browsers and mobile devices.</p>
-        </div>
-
-        <div class="project">
-            <h3>Application and Comparison of LinUCB and DivLinUCB in News Recommendation</h3>
-            <p><strong>Duration:</strong> Jan–May 2022</p>
-            <p><strong>Supervisor:</strong> Prof. Manjesh Kumar Hanawal, IIT Bombay</p>
-            <p>Implemented both the LinUCB, DivLinUCB algorithms with exploration-exploitation trade-off and the paper “Diversity in News recommendation using
-        </div>
-
-        <div class="project">
-            <h3>AI Driven Credit Scoring Model For Farmers</h3>
-            <p><strong>Duration:</strong> Jan–May 2022</p>
-            <p><strong>Supervisor:</strong> Prof. Usha Anantakumar, IIT Bombay</p>
-            <p>Developed a credit scoring model for farmers, addressing challenges such as low financial inclusion, limited access to credit, and unstructured data. Machine learning techniques, including K-Means and Hierarchical Clustering, were used to group farmers based on behavior, focusing on key factors like crop production, land area, and selling price.</p>
-        </div>
-    
-        <div class="project">
-            <h3>Optimization Modeling and Data Visualization</h3>
-            <p><strong>Duration:</strong> Jul 2021–Apr 2022</p>
-            <p><strong>Instructor:</strong> Prof. P Balamurugan, IIT Bombay</p>
-            <p>Explored various optimization models using Pyomo, solving them with CBC and GLPK. Implemented Gradient Descent, Line Search, Newton’s Algorithm, and BFGS Algorithm for solving unconstrained non-linear optimization problems and performed loss minimization. Visualized data using Seaborn and Matplotlib, summarized using descriptive statistics, and performed column normalization, clustering with K-means, and dimensionality reduction using PCA.</p>
-        </div>
     </main>
-   <!-- Footer -->
-   <footer class="footer">
-    <div class="footer-content">
-        <div class="footer-links">
-            <a href="https://github.com/iaakashRoy" class="footer-links-kudos" target="_blank">
-                Content in <i class="fa fa-github" style="font-size:24px"></i>
-            </a>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://github.com/iaakashRoy" class="footer-links-kudos" target="_blank">
+                    Content in <i class="fa fa-github" style="font-size:24px"></i>
+                </a>
+            </div>
+            <div class="updated-text">
+                Site last updated on 2024-10-12
+            </div>
+            <div class="copyright-text">
+                &copy; Aakash Roy
+            </div>
         </div>
-        <div class="updated-text">
-            Site last updated on 2024-10-12
-        </div>
-        <div class="copyright-text">
-            &copy; Aakash Roy
-        </div>
-    </div>
-</footer>
+    </footer>
+
 </body>
 </html>
