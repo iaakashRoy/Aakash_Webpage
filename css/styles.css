@@ -78,9 +78,10 @@ body {
 }
 
 .profile-photo {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
+    width: 200px; /* Ensure equal width and height */
+    height: 200px;
+    border-radius: 50%; /* Makes the image fully circular */
+    object-fit: cover; /* Ensures the image covers the container */
 }
 
 .social-links {
