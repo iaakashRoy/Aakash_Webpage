@@ -224,8 +224,8 @@ body {
     margin-bottom: 40px; /* Spacing between work experiences */
 }
 
-.work h2 {
-    color: #333; /* Heading color */
+.work h3 {
+    color: #0056b3; /* Heading color */
     font-size: 24px; /* Heading font size */
     margin-bottom: 10px; /* Space below heading */
 }
